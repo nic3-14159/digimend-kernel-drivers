@@ -72,10 +72,10 @@ udev_rules_uninstall: udev_rules_uninstall_files
 	udevadm control --reload
 
 modules_uninstall:
-	rm -vf /lib/modules/*/extra/hid-kye.ko \
-	       /lib/modules/*/extra/hid-polostar.ko \
-	       /lib/modules/*/extra/hid-uclogic.ko \
-	       /lib/modules/*/extra/hid-viewsonic.ko
+	rm -vf /lib/modules/*/extra/hid-kye.ko* \
+	       /lib/modules/*/extra/hid-polostar.ko* \
+	       /lib/modules/*/extra/hid-uclogic.ko* \
+	       /lib/modules/*/extra/hid-viewsonic.ko*
 
 install: modules modules_install depmod_conf_install dracut_conf_install udev_rules_install xorg_conf_install tools_install
 
