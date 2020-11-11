@@ -1117,6 +1117,8 @@ static int uclogic_params_init_ugee_xppen_pro(struct hid_device *hdev,
 
 	p->pen.subreport_list[0].value = 0xf0;
 	p->pen.subreport_list[0].id = p->frame_list[0].id;
+	p->frame_list[0].re_lsb = UCLOGIC_RDESC_XPPEN_STAR06_FRAME_RE_LSB;
+	printk(KERN_INFO "%02X", p->frame_list[0].re_lsb);
 
 	return 0;
 }

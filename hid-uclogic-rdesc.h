@@ -167,11 +167,11 @@ extern const size_t uclogic_rdesc_xppen_deco01_frame_size;
 extern const __u8 uclogic_rdesc_ugee_g5_frame_arr[];
 extern const size_t uclogic_rdesc_ugee_g5_frame_size;
 
-/* Report descriptor template for XP-Pen Artist 15.6 Pro pen */
+/* Report descriptor template for XP-Pen Star 06 pen */
 extern const __u8 uclogic_rdesc_xppen_star06_pen_arr[];
 extern const size_t uclogic_rdesc_xppen_star06_pen_size;
 
-/* Report descriptor template for XP-Pen Artist 15.6 Pro frame */
+/* Report descriptor template for XP-Pen Star 06 frame */
 extern const __u8 uclogic_rdesc_xppen_star06_frame_arr[];
 extern const size_t uclogic_rdesc_xppen_star06_frame_size;
 
@@ -183,5 +183,8 @@ extern const size_t uclogic_rdesc_xppen_star06_frame_size;
 
 /* Least-significant bit of Ugee G5 frame rotary encoder state */
 #define UCLOGIC_RDESC_UGEE_G5_FRAME_RE_LSB 38
+
+/* Least-significant bit of XP-Pen Star 06 frame rotary encoder state */
+#define UCLOGIC_RDESC_XPPEN_STAR06_FRAME_RE_LSB 62
 
 #endif /* _HID_UCLOGIC_RDESC_H */
