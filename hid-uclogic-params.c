@@ -802,6 +802,7 @@ static int uclogic_params_huion_init(struct uclogic_params *params,
 	/* The resulting parameters (noop) */
 	struct uclogic_params p = {0, };
 	static const char transition_ver[] = "HUION_T153_160607";
+	static const char S56K_ver[] = "HUION_T156_160726";
 	char *ver_ptr = NULL;
 	const size_t ver_len = sizeof(transition_ver) + 1;
 	__u8 *params_ptr = NULL;
@@ -849,6 +850,9 @@ static int uclogic_params_huion_init(struct uclogic_params *params,
 	if (strcmp(ver_ptr, transition_ver) == 0) {
 		hid_dbg(hdev,
 			"transition firmware detected, not probing pen v2 parameters\n");
+	} else if (strcmp(ver_ptr, S56K_ver) == 0) {
+		hid_dbg(hdev,
+			"Gaomon S56K detected, not probing pen v2 parameters\n");
 	} else {
 		/* Try to probe v2 pen parameters */
 		rc = uclogic_params_pen_init_v2(&p.pen, &found,
